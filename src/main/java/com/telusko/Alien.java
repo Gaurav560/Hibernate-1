@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Alien {
     @Id
     private int aid;
-    @Transient
+   // @Transient
     private String aname;
     @Column(name = "alien_color")
     private String color;
@@ -34,5 +34,14 @@ public class Alien {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Alien{" +
+                "aid=" + aid +
+                ", aname='" + aname + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
